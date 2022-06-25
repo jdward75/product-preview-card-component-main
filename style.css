@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.container-item {
+  flex: 0 1 300px;
+}
+
+.product-image {
+  width: 300px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.product-description {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0px 15px 15px 0px;
+}
