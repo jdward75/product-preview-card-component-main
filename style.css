@@ -1,79 +1,83 @@
+:root {
+  font-size: 62.5%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
 
-body {
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(30, 38%, 92%);
 }
 
-.container {
-  width: 600px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.product-card {
   display: flex;
-  justify-content: center;
+  max-width: 60rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 .product-image {
   content: url(images/image-product-desktop.jpg);
-  width: 300px;
-  border-radius: 15px 0px 0px 15px;
+  width: 50%;
+  flex: 0 1 auto;
 }
 
 .product-description {
   background-color: hsl(0, 0%, 100%);
-  padding: 30px;
-  border-radius: 0px 15px 15px 0px;
+  padding: 3rem;
 }
 
 h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
   color: hsl(228, 12%, 48%);
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
   font-family: "Fraunces", serif;
   font-family: 700;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: hsl(228, 12%, 48%);
-  font-size: 13px;
-  line-height: 25px;
-  margin-bottom: 35px;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .price-container {
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: 30px;
-  margin-bottom: 20px;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 
 .new-price {
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 3.2rem;
   color: hsl(158, 36%, 37%);
 }
 
 .original-price {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: hsl(212, 21%, 14%);
   text-decoration-line: line-through;
 }
@@ -82,12 +86,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
+  width: 100%;
+  border: none;
   background-color: hsl(158, 36%, 37%);
-  padding: 15px;
-  text-align: center;
+  padding: 1.5rem;
   color: hsl(0, 0%, 100%);
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .button:hover {
@@ -95,26 +100,16 @@ p {
   background-color: rgb(1, 71, 71);
 }
 
-@media (max-width: 625px) {
-  .container {
-    width: 350px;
+/* REM units in Media Queriesare ALWAYS based off DEFAULT root element 
+   font size of 16 px. Adjusting the root element font-size has no affect */
+@media (max-width: 40rem) {
+  .product-card {
+    max-width: 35rem;
     flex-direction: column;
   }
 
-  .container-item {
-    flex: 0 0 auto;
-  }
   .product-image {
     content: url(images/image-product-mobile.jpg);
-    width: 350px;
-    border-radius: 15px 15px 0px 0px;
-  }
-
-  .product-description {
-    border-radius: 0px 0px 15px 15px;
-  }
-
-  p {
-    margin-bottom: 45px;
+    width: 100%;
   }
 }
